@@ -2,7 +2,7 @@ def print_number_rides(my_hash)
   my_hash.each do |driver, rides|
     total_rides = rides.length
     print "#{driver} did #{total_rides} "
-    
+
     if total_rides == 1
       puts "ride."
     else
@@ -13,90 +13,90 @@ end
 
 def get_drivers_earnings(my_hash)
   drivers_earnings = {}
-  
+
   my_hash.each do |driver, rides|
     earnings = rides.sum do |ride|
       ride[:cost]
     end
     drivers_earnings[driver] = earnings
   end
-  
+
   return drivers_earnings
 end
 
 def get_drivers_avg_ratings(my_hash)
   avg_ratings = {}
-  
+
   my_hash.each do |driver, rides|
     ratings = rides.map do |ride|
       ride[:rating]
     end
     avg_ratings[driver] = ratings.sum / ratings.length.to_f
   end
-  
+
   return avg_ratings
 end
 
 def highest_keys(my_hash)
   max_value = my_hash.values.max
-  
-  highest_keys = my_hash.select do |key, value|
+
+  highest_keys = my_hash.select do |_key, value|
     value == max_value
   end
-  
+
   return highest_keys
 end
 
 def get_money_per_day(my_array)
   days = {}
-  
+
   my_array.each do |ride|
     day = ride[:date].to_sym
-    
+
     if days.has_key?(day)
       days[day] += ride[:cost]
     else
       days[day] = ride[:cost]
     end
   end
-  
+
   return days
 end
 
 def print_drivers_best_days(my_hash)
   my_hash.each do |driver, days|
     money_per_day = get_money_per_day(days)
-    
+
     best_days = highest_keys(money_per_day)
-    
+
     puts "Driver #{driver} made the most money on: #{best_days.keys.join(", ")}."
   end
 end
 
 ride_history = {
-  DR001:
-  [ 
-    {date: "3rd Feb 2016", cost: 10, rider_id: "RD0003", rating: 3},
-    {date: "3rd Feb 2016", cost: 30, rider_id: "RD0015", rating: 4},
-    {date: "5th Feb 2016", cost: 45, rider_id: "RD0003", rating: 2} 
-  ],
-  DR002:
-  [ 
-    {date: "3rd Feb 2016", cost: 25, rider_id: "RD0073", rating: 5},
-    {date: "4th Feb 2016", cost: 15, rider_id: "RD0013", rating: 1},
-    {date: "5th Feb 2016", cost: 35, rider_id: "RD0066", rating: 3} 
-  ],
-  DR003:
-  [ 
-    {date: "4th Feb 2016", cost: 5, rider_id: "RD0066", rating: 5},
-    {date: "5th Feb 2016", cost: 50, rider_id: "RD0003", rating: 2} 
-  ],
-  DR004:
-  [ 
-    {date: "3rd Feb 2016", cost: 5, rider_id: "RD0022", rating: 5},
-    {date: "4th Feb 2016", cost: 10, rider_id: "RD0022", rating: 4},
-    {date: "5th Feb 2016", cost: 20, rider_id: "RD0073", rating: 5} 
-  ]
+    DR001:
+        [
+            { date: "3rd Feb 2016", cost: 10, rider_id: "RD0003", rating: 3 },
+            { date: "3rd Feb 2016", cost: 30, rider_id: "RD0015", rating: 4 },
+            { date: "5th Feb 2016", cost: 45, rider_id: "RD0003", rating: 2 }
+        ],
+    DR002:
+        [
+            { date: "3rd Feb 2016", cost: 25, rider_id: "RD0073", rating: 5 },
+            { date: "4th Feb 2016", cost: 15, rider_id: "RD0013", rating: 1 },
+            { date: "5th Feb 2016", cost: 35, rider_id: "RD0066", rating: 3 }
+        ],
+    DR003:
+        [
+            { date: "4th Feb 2016", cost: 5, rider_id: "RD0066", rating: 5 },
+            { date: "5th Feb 2016", cost: 50, rider_id: "RD0003", rating: 2 }
+        ],
+    DR004:
+        [
+            { date: "3rd Feb 2016", cost: 5, rider_id: "RD0022", rating: 5 },
+            { date: "4th Feb 2016", cost: 10, rider_id: "RD0022", rating: 4 },
+            { date: "5th Feb 2016", cost: 20, rider_id: "RD0073", rating: 5 }
+        ]
 }
 
 puts "RIDE SHARE SUMMARY"
