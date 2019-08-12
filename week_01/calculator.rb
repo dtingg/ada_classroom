@@ -71,7 +71,7 @@ def exponify(first_num, second_num)
 
   equation = "#{first_num}^#{second_num} = "
 
-  (second_num - 1).times do 
+  (second_num - 1).times do
     equation << "#{first_num} * "
   end
 
@@ -112,18 +112,18 @@ while play
 
   # Use operator to apply the appropriate mathematical operation
   case operator
-    when "add", "+"
-      result = add(first_num, second_num)
-    when "subtract", "-"
-      result = subtract(first_num, second_num)
-    when "multiply", "*"
-      result = multiply(first_num, second_num)
-    when "divide", "/"
-      result = divide(first_num, second_num)
-    when "modulo", "%"
-      result = modulo(first_num, second_num)
-    when "exponify", "^"
-      result = exponify(first_num, second_num)
+  when "add", "+"
+    result = add(first_num, second_num)
+  when "subtract", "-"
+    result = subtract(first_num, second_num)
+  when "multiply", "*"
+    result = multiply(first_num, second_num)
+  when "divide", "/"
+    result = divide(first_num, second_num)
+  when "modulo", "%"
+    result = modulo(first_num, second_num)
+  when "exponify", "^"
+    result = exponify(first_num, second_num)
   end
 
   puts "The answer is: #{result}."
