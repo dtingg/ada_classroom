@@ -76,7 +76,7 @@ def exponify(first_num, second_num)
   end
 
   equation << "#{first_num} = #{power}"
-  
+
   return equation
 end
 
@@ -131,14 +131,15 @@ while play
   # Ask the user if they want to play again
   print "Do you want to use the calculator again? Y or N "
   answer = gets.chomp.upcase
-    until answer == "Y" || answer == "N"
-      print "Please enter Y or N: "
-      answer = gets.chomp.upcase
-    end
-  
-    if answer == "N"
-      play = false
-    end
+
+  until answer == "Y" || answer == "N"
+    print "Please enter Y or N: "
+    answer = gets.chomp.upcase
+  end
+
+  if answer == "N"
+    play = false
+  end
 end
 
 puts "\nThank you for using this program. Goodbye!"
