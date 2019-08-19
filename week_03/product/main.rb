@@ -1,4 +1,6 @@
-require_relative "product"
+# require_relative "product"
+require_relative "product_helper"
+
 
 # cookie = Product.new
 # cookie.name = "Chocolate Chip Cookie"
