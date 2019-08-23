@@ -36,7 +36,7 @@
 # Card - attributes: value, suit
 # Person - attributes: name
 
-class Person
+class Player
   attr_reader :name
   
   def initialize(name)
@@ -54,7 +54,8 @@ class Card
 end
 
 class Hand
-  
+  def initialize
+  end
 end
 
 class Deck
@@ -84,8 +85,24 @@ class Deck
   
 end
 
-class Game
-  def initialize
-    @players = []
+class BlackJack
+  def initialize(number_of_players)
+    @number_of_players = number_of_players
+    @all_players = []
   end  
+  
+  def make_player
+    print "What is the player's name? "
+    player_name = gets.chomp
+    
+    new_player = Player.new(player_name)
+    
+    @all_players.push(new_player)
+  end
+end
+
+def main
+  print "How many players?: "
+  num_players = gets.chomp.to_i
+  game = BlackJack.new(num_players)
 end
