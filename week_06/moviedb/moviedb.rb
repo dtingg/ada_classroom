@@ -3,14 +3,21 @@ require 'dotenv'
 
 Dotenv.load
 
-url = "https://api.themoviedb.org/3/search/movie"
+def get_response(movie_name)
+  url = "https://api.themoviedb.org/3/search/movie"
+  
+  query = { query: movie_name, api_key: ENV["API_KEY"] }
+  
+  response = HTTParty.get(url, query: query)
+  
+  response["results"].each do |movie|
+    puts movie["title"]
+    puts movie["overview"]
+    puts
+  end
+end
 
-query = {
-query: "hidden figures",
-api_key: ENV["API_KEY"]
-}
+print "Enter a movie name: "
+movie = gets.chomp
 
-response = HTTParty.get(url, query: query)
-
-puts response["results"][0]["title"]
-puts response["results"][0]["overview"]
+response = get_response(movie)
