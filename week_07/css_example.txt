@@ -1,0 +1,10 @@
+Observe the different CSS styles and make a list of their similarities and differences that you can observe https://codepen.io/adadev/pen/qVoPpa?editors=1100
+
+Similarities
+All use height: 100px
+All use width: 30%
+
+Differences
+display: inline-block shows them in a line, side by side
+display: inline shows nothing becuase you can't specify a height/width and there is no content
+display: block shows them in a line, top to bottom
