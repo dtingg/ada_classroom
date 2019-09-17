@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+}
+
+.email-link {
+  color: orange;
+}
+
+#admin-email {
+  transform: rotate(20deg);
+}
+
+.info {
+  font-family: serif;
+}
