@@ -1,0 +1,9 @@
+div {
+  display: inline;
+}
+
+img {
+  display: inline;
+  margin-left: -4px;
+  border: solid 1em tomato;
+}
