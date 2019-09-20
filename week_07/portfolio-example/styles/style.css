@@ -1,0 +1,81 @@
+* {
+  /* border: 2px solid red; */
+}
+
+body {
+  background-color: rgb(246, 237, 197);
+  color: slategray;
+  font-family: "Overpass", sans-serif;
+  font-size: 36px;
+  height: 100vh;
+}
+
+h1 {
+  font-weight: bolder;
+  text-decoration: underline
+}
+
+h2 {
+  display: inline;
+  font-size: 3rem;
+  color: white;
+  background-color: rgb(234, 34, 22)
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+}
+
+/* .main-container > * , .details-container > * {
+  border: 2px solid blue;
+} */
+
+.intro-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  text-align: right;
+  background-color: rgb(6, 44, 97);
+  color: white;
+  font-family: 'Glegoo', serif;
+  padding: 3rem
+}
+
+.intro-container p {
+  font-size: 2rem;
+}
+
+.intro-details-container {
+  font-size: 2rem;
+  padding-right: 3rem;
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center
+}
+
+.willow-image {
+  max-height: 150px;
+  max-width: 150px;
+  border-radius: 50%
+}
+
+.details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.skills-section {
+  grid-row-end: span 2;
+}
+
+.about-section {
+  grid-column-start: 2;
+}
+
+footer {
+  text-align: center
+}
