@@ -85,15 +85,13 @@ name    | length_miles | elevation_gain_feet | max_elevation_feet | rating
 ---     | ---          | ---                 | ---                | ---
 Fortune Ponds | 13.0   | 2700                | 4700               | 3
 
-1. How would you build a new instance of the `Hike` model with the above data and store it in a local variable named `new_hike`, without saving it to the database?
-
+1. How would you build a new instance of the `Hike` model with the above data and store it in a local variable named `new_hike`, without saving it to the database?  
   **new_hike = Hike.new(name: “Fortune Ponds”, length_miles: 13.0, elevation_gain_feet: 2700, max_elevation_feet: 4700, rating: 3)**
 
 2. Once `new_hike` has been built, how would you save it to the database?  
   **new_hike.save**
 
-3. How would you accomplish the above two steps in one method call?
-
+3. How would you accomplish the above two steps in one method call?  
   **new_hike = Hike.create(name: “Fortune Ponds”, length_miles: 13.0, elevation_gain_feet: 2700, max_elevation_feet: 4700, rating: 3)**
 
 
@@ -124,8 +122,7 @@ Fortune Ponds | 13.0   | 2700                | 4700               | 3
 
 ### Deleting Data
 
-1. There are two ActiveRecord methods that will remove a row from the database. What are they, and which one should you be using?
-
+1. There are two ActiveRecord methods that will remove a row from the database. What are they, and which one should you be using?  
   **destroy and delete**
   **We should be using destroy.**
 
@@ -139,5 +136,5 @@ puts Hike.find_by(id: 4)
 puts hike.id
 ```
 
-**(nil)**  
-**4**
+  **(nil)**  
+  **4**
