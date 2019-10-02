@@ -123,7 +123,7 @@ Fortune Ponds | 13.0   | 2700                | 4700               | 3
 ### Deleting Data
 
 1. There are two ActiveRecord methods that will remove a row from the database. What are they, and which one should you be using?  
-  **destroy and delete**
+  **destroy and delete**  
   **We should be using destroy.**
 
 
