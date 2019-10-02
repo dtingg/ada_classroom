@@ -134,7 +134,6 @@ hike = Hike.find(4)
 hike.destroy
 puts Hike.find_by(id: 4)
 puts hike.id
-```
-
+```  
   **(nil)**  
   **4**
