@@ -13,7 +13,7 @@ max_elevation_feet	| integer
 rating	| integer
 
 The hikes table has several rows:
-id	name	length_miles	elevation_gain_feet	max_elevation_feet	rating
+id	|name	|length_miles	|elevation_gain_feet	|max_elevation_feet	|rating
 :--- | :---- | :---- | :---- | :---- | :----
 1	|Lake |22	|5.4	|1350	|2400	|4
 2	|Annette Lake	|7.5	|1800	|3600	|3
