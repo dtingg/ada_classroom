@@ -4,22 +4,25 @@
 Our database has one table, `hikes`. The `hikes` table has the following columns:
 
 Attribute | Type
-:------------- | :-------------
-id|integer
-name|string
-length_miles	float
-elevation_gain_feet	integer
-max_elevation_feet	integer
-rating	integer
+:---------- | :----------
+id | integer
+name | string
+length_miles | float
+elevation_gain_feet	| integer
+max_elevation_feet	| integer
+rating	| integer
+
 The hikes table has several rows:
 id	name	length_miles	elevation_gain_feet	max_elevation_feet	rating
-1	Lake 22	5.4	1350	2400	4
-2	Annette Lake	7.5	1800	3600	3
-4	Mount Si	8.0	3150	3900	3
-5	Loowit Trail	28.0	6000	4800	5
-7	Mount Townsend	8.0	3010	6260	2
-12	Mount Teneriffe	13.8	3800	4788	4
-13	Teneriffe Falls	5.4	1585	2370	4
+:--- | :---- | :---- | :---- | :---- | :----
+1	|Lake |22	|5.4	|1350	|2400	|4
+2	|Annette Lake	|7.5	|1800	|3600	|3
+4	|Mount Si	|8.0	|3150	|3900	|3
+5	|Loowit Trail	|28.0	|6000	|4800	|5
+7	|Mount Townsend	|8.0	|3010	|6260	|2
+12	|Mount Teneriffe	|13.8	|3800	|4788	|4
+13	|Teneriffe Falls	|5.4	|1585	|2370	|4
+
 Questions
 Migrations
 1.	How would you create a database table including the above columns?
