@@ -127,13 +127,14 @@ Fortune Ponds | 13.0   | 2700                | 4700               | 3
   **We should be using destroy.**
 
 
-2. What will the following code print out?
-
+2. What will the following code print out?  
+  
 ```ruby
 hike = Hike.find(4)
 hike.destroy
 puts Hike.find_by(id: 4)
 puts hike.id
 ```  
-  **(nil)**  
-  **4**
+  
+  **(nil)**    
+  **4**  
