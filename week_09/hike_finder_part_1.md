@@ -118,7 +118,7 @@ Fortune Ponds | 13.0   | 2700                | 4700               | 3
     ```
     How would you change all the fields on the `hike` local variable to match whats in the hash and save it to the database in one line of code?
 
-    **hike.update(new_values)**
+    **hike.update(elevation_gain_feet: new_values[elevation_gain_feet], length_miles: new_values[length_miles], rating: new_values[rating])**
 
 ### Deleting Data
 
