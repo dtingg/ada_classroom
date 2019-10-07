@@ -38,9 +38,23 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
 
 ### Setup / Migrations
 
-1. Is the relation between trailheads and hikes one-to-one, one-to-many or many-to-many? If one-to-many, which is the one and which is the many? In other words, does a trailhead have many hikes, or does a hike have many trailheads?
-1. Assume that the `trailheads` table has been created, but the `hikes` table still does not have a `trailhead_id` column. What would you put in the migration file to set up this relation?
-1. What code do we need to add to our models to fully utilize the relation between hikes and trailheads?
+1. Is the relation between trailheads and hikes one-to-one, one-to-many or many-to-many? If one-to-many, which is the one and which is the many? In other words, does a trailhead have many hikes, or does a hike have many trailheads?  
+**One-to-many. A trailhead has many hikes.**
+1. Assume that the `trailheads` table has been created, but the `hikes` table still does not have a `trailhead_id` column. What would you put in the migration file to set up this relation?  
+**add_reference :hikes, :trailhead_id, foreign_key: true**
+1. What code do we need to add to our models to fully utilize the relation between hikes and trailheads?  
+
+    ```
+    class Hike < ApplicationRecord 
+      belongs_to :trailhead
+    end
+    ```  
+  
+    ```
+    class Trailhead < ApplicationRecord
+      has_many :hikes
+    end
+    ```  
 
 ### Relations
 
