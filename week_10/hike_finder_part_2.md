@@ -89,6 +89,6 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
     end
     ```
 
-6. What interesting test cases are there for the above method?
-  **What happens if there are adjacent hikes with the same highest rating?**
+6. What interesting test cases are there for the above method?  
+  **What happens if there are adjacent hikes with the same highest rating?**  
   **What if there are no hikes that share the same trailhead?**
