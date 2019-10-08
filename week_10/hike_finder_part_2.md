@@ -68,7 +68,9 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
 
     **Hike.create(name: "Mount Si Via Teneriffe Road Trail", trailhead_id: 3, length_miles: 9.0, elevation_gain_feet: 2950, max_elevation_feet: 3900, rating: 2)**
 
-    **Shovel trailhead into hike**
+    **hike.trailhead_id = 3**  
+    **hike.trailhead = trailhead**  
+    **trailhead.hikes << hike**  
 
 2. How would you load the trailhead for the hike with ID 9 into a local variable called `trailhead`?  
     **trailhead = Hike.find_by(id: 9).trailhead**
