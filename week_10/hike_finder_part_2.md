@@ -40,9 +40,9 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
 
 1. Is the relation between trailheads and hikes one-to-one, one-to-many or many-to-many? If one-to-many, which is the one and which is the many? In other words, does a trailhead have many hikes, or does a hike have many trailheads?  
 **One-to-many. A trailhead has many hikes.**
-1. Assume that the `trailheads` table has been created, but the `hikes` table still does not have a `trailhead_id` column. What would you put in the migration file to set up this relation?  
+2. Assume that the `trailheads` table has been created, but the `hikes` table still does not have a `trailhead_id` column. What would you put in the migration file to set up this relation?  
 **add_reference :hikes, :trailhead_id, foreign_key: true**
-1. What code do we need to add to our models to fully utilize the relation between hikes and trailheads?  
+3. What code do we need to add to our models to fully utilize the relation between hikes and trailheads?  
 
     ```
     class Hike < ApplicationRecord 
@@ -65,8 +65,30 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
     Mount Si Via Teneriffe Road Trail | 3 | 9.0 | 2950                | 3900               | 2
 
     How would you add this data to the database? What are three different ways to set up the relation between this hike and its trailhead?
-1. How would you load the trailhead for the hike with ID 9 into a local variable called `trailhead`?
-1. How would you load the list of likes for the trailhead with name "Pratt Lake Trailhead" into a local variable called `hikes`?
-1. How would you load the list of likes for the trailhead with name "Mt. Teneriffe Trailhead" with a rating of 4 into a local variable called `hikes`?
-1. Write a method `best_adjacent_hike` that, given the name of a hike, finds the highest-rated hike that shares a trailhead with that hike. Think about error handling!
-1. What interesting test cases are there for the above method?
+
+    **Hike.create(name: "Mount Si Via Teneriffe Road Trail", trailhead_id: 3, length_miles: 9.0, elevation_gain_feet: 2950, max_elevation_feet: 3900, rating: 2)**
+
+    **???**
+
+2. How would you load the trailhead for the hike with ID 9 into a local variable called `trailhead`?  
+    **trailhead = Hike.find_by(id: 9).trailhead**
+
+3. How would you load the list of hikes for the trailhead with name "Pratt Lake Trailhead" into a local variable called `hikes`?  
+    **hikes = Trailhead.where(name: "Pratt Lake Trailhead")**
+
+4. How would you load the list of hikes for the trailhead with name "Mt. Teneriffe Trailhead" with a rating of 4 into a local variable called `hikes`?  
+    **hikes = Trailhead.where(name: "Mt. Teneriffe Trailhead", rating: 4)**
+5. Write a method `best_adjacent_hike` that, given the name of a hike, finds the highest-rated hike that shares a trailhead with that hike. Think about error handling!
+
+    ```
+    def best_adjacent_hike(hike)
+      hike = Hike.find_by(name: hike)
+      trailhead = hike.trailhead
+      best_hike = Trailhead.where.not(name: hike).order(rating: :desc).first
+      return best_hike
+    end
+    ```
+
+6. What interesting test cases are there for the above method?
+  **What happens if there are adjacent hikes with the same highest rating?**
+  **What if there are no hikes that share the same trailhead?**
