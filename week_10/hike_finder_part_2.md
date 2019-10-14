@@ -39,7 +39,7 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
 ### Setup / Migrations
 
 1. Is the relation between trailheads and hikes one-to-one, one-to-many or many-to-many? If one-to-many, which is the one and which is the many? In other words, does a trailhead have many hikes, or does a hike have many trailheads?  
-**One-to-many. A trailhead has many hikes.**
+**One-to-many. A trailhead has many hikes. A hike only has one trailhead.**
 2. Assume that the `trailheads` table has been created, but the `hikes` table still does not have a `trailhead_id` column. What would you put in the migration file to set up this relation?  
 **add_reference :hikes, :trailhead_id, foreign_key: true**
 3. What code do we need to add to our models to fully utilize the relation between hikes and trailheads?  
@@ -84,9 +84,13 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
 
     ```
     def best_adjacent_hike(hike)
-      hike = Hike.find_by(name: hike)
-      trailhead = hike.trailhead
-      best_hike = Trailhead.where.not(name: hike).order(rating: :desc).first
+      first_hike = Hike.find_by(name: hike)
+      trailhead = first_hike.trailhead
+
+      trailhead_hikes = Hike.where(trailhead_id: trailhead.id).where.not(name: first_hike.name)
+
+      best_hike = trailhead_hikes.order(rating: :desc).first
+
       return best_hike
     end
     ```
