@@ -54,3 +54,6 @@ build-iPhoneSimulator/
 
 # VS Code
 .vscode
+
+# Interviews
+/interviews
