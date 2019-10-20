@@ -31,21 +31,16 @@ id  | name    | length_miles | elevation_gain_feet | max_elevation_feet | rating
 
 1. How would you create a database table including the above columns?
     - What command would you use to generate the migration?  
-      **rails generate migration create_hikes_table**  
+      **rails generate model Hike name:string length_miles:float elelvation_gain_feet:integer max_elevation_feet:integer rating:integer**  
     - Do you need to include the `id`, `created_at` and `updated_at` fields in the migration?  
       **No, those are automatically included.**  
     - Do you need to make any other changes to the generated migration?  
-      **create_table :hikes**  
-      **add_column :hikes :name :string**  
-      **add_column :hikes :length_miles :float**  
-      **add_column :hikes :elevation_gain_feet :integer**  
-      **add_column :hikes :max_elevation_feet :integer**  
-      **add_column :hikes :rating :integer**  
+      **No**  
     - How do you run the migration?  
       **rails db:migrate**
 2. How would you add a new column of type `string` called `best_month`?
     - How do you create a new migration?  
-      **rails generate migration add_best_month**
+      **rails generate migration add_best_month_to_hike**
     - What goes in the migration file?  
       **add_column :hikes :best_month :string**
     - What commands do you need to run?  
@@ -75,7 +70,7 @@ id  | name    | length_miles | elevation_gain_feet | max_elevation_feet | rating
     **Hike.count**
 
 7. **BONUS:** How would you get the list of hikes less than 8 miles long?  
-    **Hike.where(“length_miles <  8”)**
+    **Hike.where("length_miles < ?", 8)**
 
 ### Creating Data
 
