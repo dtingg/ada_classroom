@@ -76,17 +76,18 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
     **trailhead = Hike.find_by(id: 9).trailhead**
 
 3. How would you load the list of hikes for the trailhead with name "Pratt Lake Trailhead" into a local variable called `hikes`?  
-    **hikes = Trailhead.where(name: "Pratt Lake Trailhead")**
+    **hikes = Trailhead.find_by(name: "Pratt Lake Trailhead").hikes**
 
 4. How would you load the list of hikes for the trailhead with name "Mt. Teneriffe Trailhead" with a rating of 4 into a local variable called `hikes`?  
-    **hikes = Trailhead.where(name: "Mt. Teneriffe Trailhead", rating: 4)**
+    **hikes = Trailhead.where(name: "Mt. Teneriffe Trailhead").hikes.where(rating: 4)**
 5. Write a method `best_adjacent_hike` that, given the name of a hike, finds the highest-rated hike that shares a trailhead with that hike. Think about error handling!
 
     ```
     def best_adjacent_hike(hike)
       first_hike = Hike.find_by(name: hike)
-      trailhead = first_hike.trailhead
+      return nil unless first_hike
 
+      trailhead = first_hike.trailhead
       trailhead_hikes = Hike.where(trailhead_id: trailhead.id).where.not(name: first_hike.name)
 
       best_hike = trailhead_hikes.order(rating: :desc).first
@@ -96,5 +97,7 @@ id  | name   | trailhead_id | length_miles | elevation_gain_feet | max_elevation
     ```
 
 6. What interesting test cases are there for the above method?  
-  **What happens if there are adjacent hikes with the same highest rating?**  
-  **What if there are no hikes that share the same trailhead?**
+  **What happens if there are adjacent hikes with the same highest rating?**    
+  **There are several hikes for that trailhead, one of which has the higest rating.**  
+  **What if there are no hikes that share the same trailhead?**  
+  **The name provided does not correspond to a real hike.**
