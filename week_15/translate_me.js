@@ -29,7 +29,9 @@
 const coffeePrice = function(isIced, size, flavorArray) {
   let price = 2.50
 
-  if (size == 0) {}
+  if (size == 0) {
+  //  do nothing
+  }
   else if (size == 1) {
     price += 1
   } else {
@@ -45,7 +47,7 @@ const coffeePrice = function(isIced, size, flavorArray) {
     price += 0.50
   }
   )
-  console.log(price)
+  return(price)
 }
 
 console.log(coffeePrice(true, 3, ["vanilla", "lemon"]))
