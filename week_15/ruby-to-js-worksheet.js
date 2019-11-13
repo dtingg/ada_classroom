@@ -18,12 +18,12 @@
 
 // Ada is younger
 
-const person_age = 55
-const ada_age = 2
+const personAge = 55
+const adaAge = 2
 
-if (person_age < ada_age) {
+if (personAge < adaAge) {
   console.log("This person is younger")
-} else if (ada_age < person_age) {
+} else if (adaAge < personAge) {
   console.log("Ada is younger")
 } else {
   console.log("They’re the same!")
