@@ -44,7 +44,8 @@ const calculator = function(error, result) {
       answer = `I don't know what ${operation} means.`;
       break;
   }
-  console.log(answer);
+
+  console.log(`${num1} ${operation} ${num2} = ${answer}`);
 } 
 
 const prompt = require('prompt');
