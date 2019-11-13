@@ -16,6 +16,10 @@ const divideNums = function(a, b) {
   return a / b
 }
 
+const moduloNums = function(a, b) {
+  return a % b
+}
+
 const calculator = function(error, result) {
   let num1 = parseInt(result.num1)
   let num2 = parseInt(result.num2)
@@ -39,6 +43,10 @@ const calculator = function(error, result) {
     case "/":
     case "divide":
       answer = divideNums(num1, num2);
+      break;
+    case "%":
+    case "modulo":
+      answer = moduloNums(num1, num2);
       break;
     default:
       answer = `I don't know what ${operation} means.`;
