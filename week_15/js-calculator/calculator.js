@@ -25,15 +25,19 @@ const calculator = function(error, result) {
 
   switch(operation) {
     case '+':
+    case "add":
       answer = addNums(num1, num2);
       break;
     case "-":
+    case "subtract":
       answer = subtractNums(num1, num2);
       break;
     case "*":
+    case "multiply":
       answer = multiplyNums(num1, num2);
       break;
     case "/":
+    case "divide":
       answer = divideNums(num1, num2);
       break;
     default:
