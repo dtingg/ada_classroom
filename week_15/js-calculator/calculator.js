@@ -27,6 +27,12 @@ const exponifyNums = function(a, b) {
 const calculator = function(error, result) {
   let num1 = parseInt(result.num1)
   let num2 = parseInt(result.num2)
+
+  if (isNaN(num1) || (isNaN(num2))) {
+    console.log("Not a number");
+    return
+  }
+  
   let operation = result.operation
   let answer;
 
@@ -71,7 +77,3 @@ prompt.start();
 //collect two numbers (num1 and num2) and an operation
 //then call the function `calculator` with the results
 prompt.get(['num1','num2','operation'], calculator);
-
-// Gracefully handle unexpected user input:
-// What happens if the user input is empty (i.e., the user just pressed enter)?
-// What happens if the user tries to add hotdog to elephant?
