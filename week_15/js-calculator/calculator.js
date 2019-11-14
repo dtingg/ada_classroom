@@ -25,8 +25,8 @@ const exponifyNums = function(a, b) {
 }
 
 const calculator = function(error, result) {
-  let num1 = parseInt(result.num1)
-  let num2 = parseInt(result.num2)
+  let num1 = Number(result.num1)
+  let num2 = Number(result.num2)
 
   if (isNaN(num1) || (isNaN(num2))) {
     console.log("Not a number");
