@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import StudentCollection from './components/StudentCollection';
 
 const name = "Dianna"
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <StudentCollection/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -28,4 +30,3 @@ function App() {
 }
 
 export default App;
-

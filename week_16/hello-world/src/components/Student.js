@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Student(){
+const Student = (props) => {
   return(
-
+    <h3>{props.fullName} {props.email}</h3>
   );
 }
 
