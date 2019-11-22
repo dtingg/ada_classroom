@@ -16,6 +16,10 @@ const StudentCollection = () => {
       class: "Branches",
       present: true,
     },
+    {
+      fullName: "Dianna",
+      present: true,
+    }
   ];
 
   const studentComponents = students.map((student, i) => {
