@@ -10,9 +10,12 @@ const Student = (props) => {
   }
 
   return(
-    <li className={buildStyles()}>
-      {props.fullName} <p>{props.email}</p>{props.class} {props.present}
-    </li>
+    <div className={buildStyles()}>
+      <p>{props.fullName}</p> 
+      <p>{props.email}</p>
+      <p>{props.class}</p> 
+      <p>{props.present}</p>
+    </div>
   );
 }
 
