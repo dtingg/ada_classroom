@@ -1,8 +1,10 @@
 import React from "react";
+import puppy from '../puppy.jpg';
+import "./Avatar.css";
 
 const Avatar = () => {
   return (
-    <p>Avatar Component</p>
+    <img src={puppy} className="avatar-photo" alt="puppy" />
   );
 };
 
