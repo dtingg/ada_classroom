@@ -6,6 +6,10 @@
   background-color: brown;
 }
 
+.no-class {
+  background-color: cornflowerblue;
+}
+
 .present p {
   color: greenyellow;
 }
