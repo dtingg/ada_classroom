@@ -1,23 +1,17 @@
 .badge {
-  padding: .5rem;
+  margin: .2rem;
 }
 
 .badge-green {
   background: green;
   border-radius: 25%;
-  font-size: 1rem;
-  padding: .1rem;
-  margin: .25rem;
-  position: relative;
-  top: -5px;
+  padding: .2rem;
+  margin: .2rem;
 }
 
 .badge-red {
   background: red;
   border-radius: 25%;
-  font-size: 1rem;
-  padding: .1rem;
-  margin: .25rem;
-  position: relative;
-  top: -5px;
+  padding: .2rem;
+  margin: .2rem;
 }

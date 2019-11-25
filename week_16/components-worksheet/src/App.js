@@ -27,7 +27,7 @@ function App() {
     userName: "Dianna",
     avatarUrl: "https://placekitten.com/200/200",
     rank: "Administrator",
-    score: 950
+    score: 55
   }
 
   return (
@@ -39,9 +39,9 @@ function App() {
         </p>
         <p>
           Badges<br /><br />
-          Notifications
+          Notifications 
           <Badge number={badge.low}/>
-          Notifications
+          Notifications 
           <Badge number={badge.high}/>
         </p>
         <p>
@@ -50,7 +50,7 @@ function App() {
         </p>
         <p>
           User Card
-          <UserCard userName={user.userName} avatarUrl={user.avatarUrl} rank={user.rank} score={user.score}/>
+          <UserCard userName={user.userName} avatarUrl={user.avatarUrl} rank={user.rank} number={user.score}/>
         </p>
       </header>
     </div>
