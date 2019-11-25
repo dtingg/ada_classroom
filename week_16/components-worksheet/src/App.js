@@ -8,30 +8,18 @@ function App() {
     url: "http://place-puppy.com/200x200",
     alt: "puppy"
   }
-  
-
-
 
   const notifications=10
-
-
 
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Avatar
+          Avatar<br /><br />
           <div><Avatar url={avatar.url} alt={avatar.alt}/></div>
         </p>
-
-
-
-
-
-
         <p>
-          Badge
-          <div>Notifications</div>
+          <div>Badge</div><br />
           <Badge number={notifications}/>
         </p>
       </header>
