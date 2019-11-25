@@ -1,29 +1,39 @@
 import React from 'react';
 import './App.css';
 import Avatar from "./components/Avatar";
+import Badge from "./components/Badge";
 
 function App() {
+  const avatar = {
+    url: "http://place-puppy.com/200x200",
+    alt: "puppy"
+  }
+  
+
+
+
+  const notifications=10
+
+
+
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p> */}
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+          Avatar
+          <div><Avatar url={avatar.url} alt={avatar.alt}/></div>
+        </p>
 
 
 
-        Avatar
-        <Avatar />
 
+
+
+        <p>
+          Badge
+          <div>Notifications</div>
+          <Badge number={notifications}/>
+        </p>
       </header>
     </div>
   );

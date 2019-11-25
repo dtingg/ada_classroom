@@ -1,10 +1,9 @@
 import React from "react";
-// import puppy from '../puppy.jpg';
 import "./Avatar.css";
 
-const Avatar = () => {
+const Avatar = (props) => {
   return (
-    <img src={"http://place-puppy.com/200x200"} className="avatar-photo" alt="puppy" />
+    <img className="avatar-photo" src={props.url} alt={props.alt} />
   );
 };
 
