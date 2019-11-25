@@ -7,9 +7,12 @@ function App() {
   const avatar = {
     url: "http://place-puppy.com/200x200",
     alt: "puppy"
-  }
+  };
 
-  const notifications=10
+  const notifications = {
+    low: 10,
+    high: 75
+  };
 
   return (
     <div className="App">
@@ -20,7 +23,8 @@ function App() {
         </p>
         <p>
           <div>Badge</div><br />
-          <Badge number={notifications}/>
+          <Badge number={notifications.low}/>
+          <Badge number={notifications.high}/>
         </p>
       </header>
     </div>

@@ -1,5 +1,15 @@
-.badge-number {
-  background: skyblue;
+.badge-green {
+  background: green;
+  border-radius: 25%;
+  font-size: 1rem;
+  padding: .1rem;
+  margin: .25rem;
+  position: relative;
+  top: -10px;
+}
+
+.badge-red {
+  background: red;
   border-radius: 25%;
   font-size: 1rem;
   padding: .1rem;
