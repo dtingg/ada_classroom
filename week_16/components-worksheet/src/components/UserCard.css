@@ -1,0 +1,10 @@
+.card {
+  background-color: lightpink;
+  display: flex;
+}
+
+.card-text {
+  text-align: left;
+  align-self: center;
+  padding: 1rem;
+}

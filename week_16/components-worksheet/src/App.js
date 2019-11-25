@@ -3,6 +3,7 @@ import './App.css';
 import Avatar from "./components/Avatar";
 import Badge from "./components/Badge";
 import Product from "./components/Product";
+import UserCard from './components/UserCard';
 
 function App() {
   const avatar = {
@@ -22,6 +23,13 @@ function App() {
     discount: 99,
   }
 
+  const user = {
+    userName: "Dianna",
+    avatarUrl: "https://placekitten.com/200/200",
+    rank: "Administrator",
+    score: 950
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -31,12 +39,18 @@ function App() {
         </p>
         <p>
           Badges<br /><br />
+          Notifications
           <Badge number={badge.low}/>
+          Notifications
           <Badge number={badge.high}/>
         </p>
         <p>
           Product<br />
           <Product url={product.url} name={product.name} standard={product.standard} discount={product.discount}/>
+        </p>
+        <p>
+          User Card
+          <UserCard userName={user.userName} avatarUrl={user.avatarUrl} rank={user.rank} score={user.score}/>
         </p>
       </header>
     </div>

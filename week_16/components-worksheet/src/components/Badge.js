@@ -10,7 +10,7 @@ const Badge = (props) => {
 
   return (
     <span className="badge">
-      <span>Notifications</span>
+      {/* <span>Notifications</span> */}
       <span className={badgeColor()}>{props.number}</span>
     </span>
   );

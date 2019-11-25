@@ -1,5 +1,5 @@
 .badge {
-  padding: 2rem;
+  padding: .5rem;
 }
 
 .badge-green {
@@ -9,7 +9,7 @@
   padding: .1rem;
   margin: .25rem;
   position: relative;
-  top: -10px;
+  top: -5px;
 }
 
 .badge-red {
@@ -19,5 +19,5 @@
   padding: .1rem;
   margin: .25rem;
   position: relative;
-  top: -10px;
+  top: -5px;
 }
