@@ -1,0 +1,15 @@
+.price-red {
+  color: red;
+}
+
+.price-black {
+  color: black;
+}
+
+.price-regular {
+
+}
+
+.price-strike {
+  text-decoration: line-through;
+}
