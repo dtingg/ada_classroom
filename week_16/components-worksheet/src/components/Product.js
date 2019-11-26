@@ -18,7 +18,7 @@ const Product = (props) => {
     <div>
       <img src={props.url} />
       <div>{props.name}</div>
-      <span className={discountPriceColor()}>${props.discount}</span> <span className={standardPriceFormat()}>${props.standard}</span>
+      <span className={discountPriceColor()}>${props.discount.toFixed(2)}</span> <span className={standardPriceFormat()}>${props.standard.toFixed(2)}</span>
     </div>
   );
 };

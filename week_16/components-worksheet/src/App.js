@@ -19,8 +19,8 @@ function App() {
   const product = {
     name: "Magnolia Babydoll Tunic",
     url: "https://s7d5.scene7.com/is/image/Anthropologie/4130318350010_038_b",
-    standard: 140,
-    discount: 99,
+    standard: 140.00,
+    discount: 99.00,
   }
 
   const user = {
@@ -29,6 +29,27 @@ function App() {
     rank: "Administrator",
     score: 55
   }
+
+  const products = [
+    {
+      name: "Ramey Notepad",
+      url: "https://s7d5.scene7.com/is/image/Anthropologie/51374262_009_b",
+      price: 18.00,
+      discount: 12.95
+    }, 
+    {
+      name: "Velvet Delaney Chair",
+      url: "https://s7d5.scene7.com/is/image/Anthropologie/45202009_105_b",
+      price: 1148.00,
+      discount: 549.95
+    }, 
+    {
+      name: "Salome Serving Set",
+      url: "https://s7d5.scene7.com/is/image/Anthropologie/45372518AA_028_b",
+      price: 42.00,
+      discount: 29.95
+    }, 
+  ]
 
   return (
     <div className="App">
