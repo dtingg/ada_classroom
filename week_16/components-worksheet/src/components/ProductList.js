@@ -1,17 +1,20 @@
 import React from "react";
 import "./ProductList.css";
-// import Avatar from "./Avatar"
-// import Badge from "./Badge"
+import Product from "./Product";
 
 const ProductList = (props) => {
+  const productListComponents = props.products.map((product, i) => {
+    return (
+      <span key={i}>
+        <Product url={product.url} name= {product.name} standard={product.standard} discount={product.discount} />
+      </span>
+    );
+  });
+
   return (
-    // <div className="card">
-    //   <Avatar url={props.avatarUrl} />
-    //   <div className="card-text">
-    //     <span>{props.userName}</span><Badge number={props.number} />
-    //     <div>{props.rank}</div>
-    //   </div>
-    // </div>
+    <div className="product-list">
+      {productListComponents}
+    </div>
   );
 };
 

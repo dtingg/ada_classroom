@@ -1,6 +1,7 @@
 .card {
   background-color: lightpink;
   display: flex;
+  margin: 2rem;
 }
 
 .card-text {

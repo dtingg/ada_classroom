@@ -1,13 +1,17 @@
+.product {
+  padding: 2rem;
+}
+
 .price-red {
   color: red;
 }
 
-.price-black {
-  color: black;
+.price-white {
+  color: white;
 }
 
 .price-regular {
-
+  text-decoration: none;
 }
 
 .price-strike {

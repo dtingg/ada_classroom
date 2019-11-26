@@ -4,6 +4,7 @@ import Avatar from "./components/Avatar";
 import Badge from "./components/Badge";
 import Product from "./components/Product";
 import UserCard from './components/UserCard';
+import ProductList from "./components/ProductList";
 
 function App() {
   const avatar = {
@@ -34,20 +35,20 @@ function App() {
     {
       name: "Ramey Notepad",
       url: "https://s7d5.scene7.com/is/image/Anthropologie/51374262_009_b",
-      price: 18.00,
-      discount: 12.95
+      standard: 18.00,
+      discount: 12.95,
     }, 
     {
       name: "Velvet Delaney Chair",
       url: "https://s7d5.scene7.com/is/image/Anthropologie/45202009_105_b",
-      price: 1148.00,
-      discount: 549.95
+      standard: 1148.00,
+      discount: 549.95,
     }, 
     {
       name: "Salome Serving Set",
       url: "https://s7d5.scene7.com/is/image/Anthropologie/45372518AA_028_b",
-      price: 42.00,
-      discount: 29.95
+      standard: 42.00,
+      discount: 29.95,
     }, 
   ]
 
@@ -55,23 +56,32 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Avatar<br /><br />
-          <span><Avatar url={avatar.url} alt={avatar.alt}/></span>
+          Avatar<br />
+          <Avatar url={avatar.url} alt={avatar.alt}/>
         </p>
         <p>
-          Badges<br /><br />
-          Notifications 
-          <Badge number={badge.low}/>
-          Notifications 
-          <Badge number={badge.high}/>
+          Badges<br />
+          <p>
+            Notifications 
+            <Badge number={badge.low}/>
+          </p>          
+          <p>
+            Notifications 
+            <Badge number={badge.high}/>
+          </p>
         </p>
         <p>
-          Product<br />
+          Product
           <Product url={product.url} name={product.name} standard={product.standard} discount={product.discount}/>
         </p>
         <p>
           User Card
           <UserCard userName={user.userName} avatarUrl={user.avatarUrl} rank={user.rank} number={user.score}/>
+        </p>
+        <p>
+          Product List
+          <ProductList products={products} />
+          
         </p>
       </header>
     </div>
