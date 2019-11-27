@@ -16,7 +16,7 @@ const Product = (props) => {
 
   return (
     <div className="product">
-      <img src={props.url} />
+      <img src={props.url} alt={props.alt}/>
       <div>{props.name}</div>
       <span className={discountPriceColor()}>${props.discount.toFixed(2)}</span> <span className={standardPriceFormat()}>${props.standard.toFixed(2)}</span>
     </div>

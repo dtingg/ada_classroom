@@ -20,6 +20,7 @@ function App() {
   const product = {
     name: "Magnolia Babydoll Tunic",
     url: "https://s7d5.scene7.com/is/image/Anthropologie/4130318350010_038_b",
+    alt: "dress",
     standard: 140.00,
     discount: 99.00,
   }
@@ -35,18 +36,21 @@ function App() {
     {
       name: "Ramey Notepad",
       url: "https://s7d5.scene7.com/is/image/Anthropologie/51374262_009_b",
+      alt: "notepad",
       standard: 18.00,
       discount: 12.95,
     }, 
     {
       name: "Velvet Delaney Chair",
       url: "https://s7d5.scene7.com/is/image/Anthropologie/45202009_105_b",
+      alt: "chair",
       standard: 1148.00,
       discount: 549.95,
     }, 
     {
       name: "Salome Serving Set",
       url: "https://s7d5.scene7.com/is/image/Anthropologie/45372518AA_028_b",
+      alt: "silverware",
       standard: 42.00,
       discount: 29.95,
     }, 
@@ -55,34 +59,37 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <div>
           Avatar<br />
           <Avatar url={avatar.url} alt={avatar.alt}/>
-        </p>
-        <p>
-          Badges<br />
-          <p>
+        </div>
+        <div>
+          Badges<br /><br />
+          <div>
             Notifications 
             <Badge number={badge.low}/>
-          </p>          
-          <p>
+            <br />
+            <br />
+          </div>          
+          <div>
             Notifications 
             <Badge number={badge.high}/>
-          </p>
-        </p>
-        <p>
+            <br />
+            <br />
+          </div>
+        </div>
+        <div>
           Product
           <Product url={product.url} name={product.name} standard={product.standard} discount={product.discount}/>
-        </p>
-        <p>
+        </div>
+        <div>
           User Card
           <UserCard userName={user.userName} avatarUrl={user.avatarUrl} rank={user.rank} number={user.score}/>
-        </p>
-        <p>
+        </div>
+        <div>
           Product List
           <ProductList products={products} />
-          
-        </p>
+        </div>
       </header>
     </div>
   );
