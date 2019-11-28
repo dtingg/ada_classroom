@@ -1,0 +1,19 @@
+.product {
+  padding: 2rem;
+}
+
+.price-red {
+  color: red;
+}
+
+.price-white {
+  color: white;
+}
+
+.price-regular {
+  text-decoration: none;
+}
+
+.price-strike {
+  text-decoration: line-through;
+}
